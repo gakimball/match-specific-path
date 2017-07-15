@@ -1,7 +1,7 @@
 {
-  "name": "MODULE",
+  "name": "match-specific-path",
   "version": "1.0.0",
-  "description": "MODULE_DESCRIPTION",
+  "description": "Find the most specific matching path in a list",
   "main": "index.js",
   "scripts": {
     "prepublish": "eslint",
@@ -9,24 +9,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gakimball/MODULE.git"
+    "url": "git+https://github.com/gakimball/match-specific-path.git"
   },
   "keywords": [
-    "MODULE"
+    "match",
+    "path"
   ],
   "author": "Geoff Kimball <geoff@geoffkimball.com> (http://geoffkimball.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gakimball/MODULE/issues"
+    "url": "https://github.com/gakimball/match-specific-path/issues"
   },
-  "homepage": "https://github.com/gakimball/MODULE#readme",
+  "homepage": "https://github.com/gakimball/match-specific-path#readme",
   "devDependencies": {
-    "@gakimball/eslint-config": "^1.0.0",
+    "@gakimball/eslint-config": "^3.2.0",
     "chai": "^3.5.0",
     "eslint": "^3.15.0",
     "mocha": "^3.2.0"
   },
   "engines": {
     "node": ">=4"
+  },
+  "dependencies": {
+    "contains-path": "^1.0.0"
   }
 }
