@@ -4,8 +4,7 @@
   "description": "Find the most specific matching path in a list",
   "main": "index.js",
   "scripts": {
-    "prepublish": "eslint",
-    "test": "mocha"
+    "test": "xo && mocha"
   },
   "repository": {
     "type": "git",
@@ -22,15 +21,17 @@
   },
   "homepage": "https://github.com/gakimball/match-specific-path#readme",
   "devDependencies": {
-    "@gakimball/eslint-config": "^3.2.0",
     "chai": "^3.5.0",
-    "eslint": "^3.15.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "xo": "^0.18.2"
   },
   "engines": {
     "node": ">=4"
   },
   "dependencies": {
     "contains-path": "^1.0.0"
+  },
+  "xo": {
+    "space": true
   }
 }

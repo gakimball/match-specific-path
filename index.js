@@ -20,9 +20,8 @@ function match(paths, needle, returnIndex) {
   if (returnIndex) {
     return index;
   }
-  else {
-    return list[index];
-  }
+
+  return list[index];
 }
 
 module.exports = match;
