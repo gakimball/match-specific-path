@@ -4,7 +4,7 @@
 const expect = require('chai').expect;
 const match = require('.');
 
-const paths = ['b/c', 'b', 'a'];
+const paths = ['b', 'b/c', 'a'];
 
 describe('match()', () => {
   it('returns undefined for non-matches', () => {

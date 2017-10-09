@@ -6,15 +6,15 @@
 
 ## Installation
 
-*Not published yet.*
+```bash
+npm install match-specific-path
+```
 
 ## Usage
 
-**Note:** the input array must be sorted alphabetically *in reverse* for this to work. Do this with `array.sort().reverse()`.
-
 ```js
 const matchPath = require('match-specific-path');
-const paths = ['a', 'b', 'b/c'].sort().reverse();
+const paths = ['a', 'b', 'b/c'];
 
 // /b is the most specific match
 matchPath(paths, 'b'); // => 'b'
@@ -41,9 +41,9 @@ Given a list of paths and a target, find the most specific path that matches the
 - **paths** (Array of strings): paths to examine.
 - **needle** (String): target path.
 
-Returns a string of the matching path, or `undefined` if no paths match.
+Returns a string of the most specific matching path, or `undefined` if no paths match.
 
-### matchPath(paths, needle)
+### matchPath.index(paths, needle)
 
 Like `matchPath`, but returns the array index instead of the value.
 

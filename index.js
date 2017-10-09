@@ -8,12 +8,20 @@ const containsPath = require('contains-path');
  * @returns {(String|Integer)} If `returnIndex` is `true`, the index of the matched path or `-1`. If `returnIndex` is `false`, the matched path or `undefined`.
  */
 function match(paths, needle, returnIndex) {
-  const list = Array.from(paths).sort();
+  const list = Array.from(paths).map(path => ({
+    contents: path,
+    length: path.split('/')
+  }));
   let index = -1;
 
-  for (const i in paths) {
-    if (containsPath(needle, `./${paths[i]}`)) {
-      index = i;
+  for (const i in list) {
+    if (containsPath(needle, `./${list[i].contents}`)) {
+      if (
+        index === -1 ||
+        list[i].length > list[index].length
+      ) {
+        index = i;
+      }
     }
   }
 
@@ -21,7 +29,9 @@ function match(paths, needle, returnIndex) {
     return index;
   }
 
-  return list[index];
+  if (index > -1) {
+    return list[index].contents;
+  }
 }
 
 module.exports = match;
